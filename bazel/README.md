@@ -6,6 +6,19 @@ The `bazel` is designed for building multiple programming languages and multiple
 
 Before you start using `bazel`, you should install it first. You can surf the link([Installing bazel](https://docs.bazel.build/versions/master/install.html)) to select the proper installation.
 
+You can also build the `bazel` from scratch via docker container. However, bazel tools on most platforms can be downloaded directly from the official github respoitory. If requiring building bazel on specific platform, like arm 32-bit, you can build bazle via docker container by the following command.
+
+```sh
+cd ./bazel
+
+# build the bazel making tool on ARM system
+docker build --build-arg IMAGE=ubuntu:20.04 --build-arg BAZEL_VERSION=4.1.0 -t bazel:4.1.0 -f build.dockerfile .
+```
+
+You can also download the arm32-based bazel binary from the following links.
+* [bazel-3.7.2-linux-arm32](https://storage.googleapis.com/jkw-gs/public/bazel-bin/bazel-3.7.2-linux-arm32)
+* [bazel-4.1.0-linux-arm32](https://storage.googleapis.com/jkw-gs/public/bazel-bin/bazel-4.1.0-linux-arm32)
+
 ## how to make C++ source files
 
 * There are two required files, one is `BUILD` file and the other is `WORKSPACE`.
