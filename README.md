@@ -22,3 +22,7 @@ In the modern system, the C++ source code is frequently embedded or wrapped by t
 
 * [`cpython`](cpython): In the first approach, we introduce how to wrap the C++ source code by the official supporting.
 * [`ctypes`](ctypes): The second approach is to wrap the C++ source code by compiling it into the shared library, and then load the library in the Python runtime. The `ctypes` defines lots of data types and accessing methods for interacting.
+
+C++ is one of most popular programming languages. It is also adopted for developing apps on different types of SoC, and microcontrollers. However, in many cases, it is hard to preapre all kinds of hardware platforms for compiling C++ source code. To these cases, cross compiling may be a good approach, and it can provide relatively much resource for compiling.
+
+* [`cross compiling for armhf`](cross-compiling-armhf): in this scenario, we demo how to cross compile the C++ source code for armhf in x86_64.
